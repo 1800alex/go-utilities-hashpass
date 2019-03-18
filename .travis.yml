@@ -1,0 +1,17 @@
+language: go
+
+go:
+    - 1.12.x
+    - master
+
+env:
+    - GOOS=linux GOARCH=386
+    - GOOS=linux GOARCH=arm
+
+before_install:
+    - go get -v github.com/stretchr/testify/assert
+    - go get -v github.com/1800alex/go-utilities-password
+    - go get -v github.com/GehirnInc/crypt
+    - go get -v github.com/GehirnInc/crypt/md5_crypt
+    - go get -v github.com/GehirnInc/crypt/sha256_crypt
+    - go get -v github.com/GehirnInc/crypt/sha512_crypt
