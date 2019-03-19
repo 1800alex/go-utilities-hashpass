@@ -43,3 +43,100 @@ SHA-512 | 86 characters
 
 
 
+
+# Examples
+
+Hash
+Code:
+
+```
+{
+	var hash HashPass
+	var err error
+	hash, err = Hash("$6$1bM59POonOkcgZVg$", "7Jh29J49Q9hgLYHxQMduzFcTkwrz5AB4")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	if hash.Hash == "" {
+		fmt.Println("something went wrong")
+	}
+}
+```
+
+
+MD5Hash
+Code:
+
+```
+{
+	var hash HashPass
+	var err error
+	hash, err = MD5Hash("7Jh29J49Q9hgLYHxQMduzFcTkwrz5AB4")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	if hash.Hash == "" {
+		fmt.Println("something went wrong")
+	}
+}
+```
+
+
+SHA256Hash
+Code:
+
+```
+{
+	var hash HashPass
+	var err error
+	hash, err = SHA256Hash("7Jh29J49Q9hgLYHxQMduzFcTkwrz5AB4")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	if hash.Hash == "" {
+		fmt.Println("something went wrong")
+	}
+}
+```
+
+
+SHA512Hash
+Code:
+
+```
+{
+	var hash HashPass
+	var err error
+	hash, err = SHA512Hash("7Jh29J49Q9hgLYHxQMduzFcTkwrz5AB4")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	if hash.Hash == "" {
+		fmt.Println("something went wrong")
+	}
+	fmt.Println(hash.Hash)
+}
+```
+
+
+Verify
+Code:
+
+```
+{
+	var verify bool
+	var err error
+	verify, err = Verify("$1$oNAuG282$IJK4Qq1ySC1tW03dYg7XS.", "password")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	if verify == false {
+		fmt.Println("incorrect password")
+	} else {
+		fmt.Println("correct password")
+	}
+}
+```
+
+
+
