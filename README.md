@@ -1,8 +1,8 @@
-# hashpass [![GoDoc](https://godoc.org/github.com/1800alex/go-utilities-hashpass?status.svg)](https://godoc.org/github.com/1800alex/go-utilities-hashpass)
+# hashpass
 [![Build Status](https://travis-ci.com/1800alex/go-utilities-hashpass.svg?branch=master)](https://travis-ci.com/1800alex/go-utilities-hashpass)
 [![Coverage Status](https://coveralls.io/repos/github/1800alex/go-utilities-hashpass/badge.svg?branch=master)](https://coveralls.io/github/1800alex/go-utilities-hashpass?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/1800alex/go-utilities-hashpass)](https://goreportcard.com/report/github.com/1800alex/go-utilities-hashpass)
-
+[![GoDoc](https://godoc.org/github.com/1800alex/go-utilities-hashpass?status.svg)](https://godoc.org/github.com/1800alex/go-utilities-hashpass)
 
 Package hashpass is a package capable parsing and generating libc compatible password hashes If salt is a character string starting with the characters "$id$" followed by a string terminated by "$": $id$salt$encrypted then instead of using the DES machine, id identifies the encryption method used and this then determines how the rest of the password string is interpreted.
 
